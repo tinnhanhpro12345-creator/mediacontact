@@ -1,110 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+ 
+<!-- Mirrored from restrictcontentblockpage.vercel.app/page/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 12 Oct 2024 01:43:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="shortcut icon" href="ico.ico" typePHA="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="ico.ico" type="image/x-icon">
   <title>New Tab</title>
-
-  <!-- Google Analytics 4 -->
-  <script
-    async
-   bel="noopener noreferrer" href="https://www.googletagmanager.com/gtag/js?id=G-GNGCXVYP6L"
-  ></script>
-
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag("js", new Date());
-
-    gtag("config", "G-GNGCXVYP6L", {
-      send_page_view: true
-    });
-  </script>
-
-  <style>
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #000;
-      overflow: hidden;
-    }
-
+  <!-- <style>
     #myVideo {
-      display: block;
-      max-width: 100%;
-      max-height: 100%;
-      cursor: pointer;
+      width: 100%;
+      height: auto;
     }
+  </style> -->
+  <style>
+   body,
+   html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+
+   #myVideo {
+    max-width: 100%;
+    max-height: 100%;
+   }
   </style>
-</head>
+ </head>
 
-<body>
+ <body>
   <video id="myVideo" autoplay muted playsinline>
-    <source
-      src="https://restrictcontentblockpage.vercel.app/img/Mate.mp4"
-      type="video/mp4"
-    >
-
-    Your browser does not support the video tag.
+   <source src="https://restrictcontentblockpage.vercel.app/img/Mate.mp4" type="video/mp4" />
+   Your browser does not support the video tag.
   </video>
 
   <script>
-    const video = document.getElementById("myVideo");
-    const landingPageUrl = "Landingpage/landingpage.html";
-
-    let redirected = false;
-
-    // Theo dõi khi người dùng bấm vào video
-    video.addEventListener("click", function () {
-      gtag("event", "video_click", {
-        event_category: "engagement",
-        event_label: "Mate video",
-        page_location: window.location.href,
-        transport_type: "beacon"
-      });
-    });
-
-    // Theo dõi khi video bắt đầu phát
-    video.addEventListener("play", function () {
-      gtag("event", "video_start", {
-        event_category: "video",
-        event_label: "Mate video",
-        transport_type: "beacon"
-      });
-    }, { once: true });
-
-    // Theo dõi và tự chuyển trang sau 4 giây
-    setTimeout(function () {
-      if (redirected) {
-        return;
-      }
-
-      redirected = true;
-
-      gtag("event", "auto_redirect", {
-        event_category: "navigation",
-        event_label: landingPageUrl,
-        destination: landingPageUrl,
-        transport_type: "beacon"
-      });
-
-      // Đợi một chút để Analytics gửi sự kiện
-      setTimeout(function () {
-        window.location.href = landingPageUrl;
-      }, 500);
-    }, 4000);
+   setTimeout(function () {
+    //window.location.href = window.location.origin + "/1vWOyN7xZ2xSoDL=KwTQr2qM04lQpteT.html";
+	window.location.href = "Landingpage/landingpage.html";
+	
+   }, 4000);
   </script>
-</body>
+ </body>
+
+<!-- Mirrored from restrictcontentblockpage.vercel.app/page/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 12 Oct 2024 01:43:05 GMT -->
 </html>
